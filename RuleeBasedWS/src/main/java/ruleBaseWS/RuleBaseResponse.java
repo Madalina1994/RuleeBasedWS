@@ -16,18 +16,4 @@ public class RuleBaseResponse {
     public void setRelevantBanks( ArrayList<String> relevantBanks ) {
         this.relevantBanks = relevantBanks;
     }
-
-//    private ArrayList<Bank> relevantBanks;
-//
-//    public RuleBaseResponse( ArrayList<Bank> relevantBanks ) {
-//        this.relevantBanks = relevantBanks;
-//    }
-//
-//    public ArrayList<Bank> getRelevantBanks() {
-//        return relevantBanks;
-//    }
-//
-//    public void setRelevantBanks( ArrayList<Bank> relevantBanks ) {
-//        this.relevantBanks = relevantBanks;
-//    }
 }

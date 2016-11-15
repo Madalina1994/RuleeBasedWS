@@ -50,41 +50,4 @@ public class RuleBaseWS {
         System.out.println( "xml" + xmlString );
         return xmlString;
     }
-    /////////////////using the Banks class/////////////////////
-//    private static ArrayList<Bank> allBanks2;
-//    private static ArrayList<Bank> relevantBanks2;
-//
-//    @WebMethod( operationName = "getRelevantBanks" )
-//    public String getInterestRate( @WebParam( name = "creditScore" ) int creditScore ) throws JAXBException, IOException {
-//
-//        Bank danskeBank = new Bank( 1, "Danske Bank", "exch_danske", 500 );
-//        Bank nordea = new Bank( 2, "Nordea", "exch_nordea", 300 );
-//        Bank jyskeBank = new Bank( 3, "Jyske Bank", "exch_danske", 0 );
-//        allBanks2 = new ArrayList();
-//        allBanks2.add( danskeBank );
-//        allBanks2.add( nordea );
-//        allBanks2.add( jyskeBank );
-//        relevantBanks2 = new ArrayList();
-//        if ( creditScore >= danskeBank.getMinCreditScore() ) {
-//            relevantBanks2.add( danskeBank );
-//        } 
-//        if ( creditScore >= nordea.getMinCreditScore() ) {
-//            relevantBanks2.add( nordea );
-//        } 
-//        if ( creditScore >= jyskeBank.getMinCreditScore() ) {
-//            relevantBanks2.add( jyskeBank );
-//        }
-//
-//        RuleBaseResponse response = new RuleBaseResponse( relevantBanks2 );
-//        JAXBContext jc = JAXBContext.newInstance( RuleBaseResponse.class );
-//        Marshaller marshaller = jc.createMarshaller();
-//        marshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
-//        JAXBElement<RuleBaseResponse> je2 = new JAXBElement( new QName( "RuleBaseRequest" ), RuleBaseResponse.class, response );
-//        StringWriter sw = new StringWriter();
-//        marshaller.marshal( je2, sw );
-//        String xmlString = sw.toString();
-//
-//        System.out.println( "xml" + xmlString );
-//        return xmlString;
-//    }
 }
