@@ -12,21 +12,22 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.namespace.QName;
+import model.Bank;
 
 @WebService( serviceName = "RuleBase" )
 public class RuleBaseWS {
 
-    private static ArrayList<String> allBanks;
-    private static ArrayList<String> relevantBanks;
+    private static ArrayList<Bank> allBanks;
+    private static ArrayList<Bank> relevantBanks;
 
     @WebMethod( operationName = "getRelevantBanks" )
     public String getInterestRate( @WebParam( name = "creditScore" ) int creditScore ) throws JAXBException, IOException {
 
         allBanks = new ArrayList<>();
-        allBanks.add( "Danske Bank" );
-        allBanks.add( "Nordea" );
-        allBanks.add( "Jyske Bank" );
-        relevantBanks = new ArrayList<String>();
+        allBanks.add(new Bank( "Danske Bank", "xml" ));
+        allBanks.add(new Bank( "Nordea", "json") );
+        allBanks.add(new Bank( "Jyske Bank", "ws") );
+        relevantBanks = new ArrayList<Bank>();
         if ( creditScore >= 500 ) {
             relevantBanks.add( allBanks.get( 0 ) );
             relevantBanks.add( allBanks.get( 1 ) );
