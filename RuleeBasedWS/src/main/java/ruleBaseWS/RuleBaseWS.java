@@ -27,16 +27,20 @@ public class RuleBaseWS {
         allBanks.add(new Bank( "Danske Bank", "xml" ));
         allBanks.add(new Bank( "Nordea", "json") );
         allBanks.add(new Bank( "Jyske Bank", "ws") );
+        allBanks.add(new Bank( "Nordic Bank", "rabbitMQ") );
         relevantBanks = new ArrayList<Bank>();
         if ( creditScore >= 500 ) {
             relevantBanks.add( allBanks.get( 0 ) );
             relevantBanks.add( allBanks.get( 1 ) );
+            relevantBanks.add( allBanks.get( 3 ) );
         } else if ( creditScore >= 300 ) {
             relevantBanks.add( allBanks.get( 1 ) );
             relevantBanks.add( allBanks.get( 2 ) );
+            relevantBanks.add( allBanks.get( 3 ) );
         } else {
             relevantBanks.add( allBanks.get( 0 ) );
             relevantBanks.add( allBanks.get( 2 ) );
+            relevantBanks.add( allBanks.get( 3 ) );
         }
 
         RuleBaseResponse response= new RuleBaseResponse(relevantBanks );
